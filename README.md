@@ -1,4 +1,4 @@
-# dynamicthemeexample
+# Dynamic Theme Example
 
 Custom dynamic theme using flutter
 
