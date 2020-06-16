@@ -8,11 +8,8 @@ import 'package:provider/provider.dart';
 import 'theme_button.dart';
 
 void main() {
-  runApp(
-      ChangeNotifierProvider<ThemeNotifier>(
-        create: (_) => ThemeNotifier(blueTheme), child: MyApp()
-      )
-  );
+  runApp(ChangeNotifierProvider<ThemeNotifier>(
+      create: (_) => ThemeNotifier(blueTheme), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -20,7 +17,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     return MaterialApp(
-
       debugShowCheckedModeBanner: false,
       title: "Flutter Dynamic Theme",
       theme: themeNotifier.getTheme(),
@@ -42,7 +38,8 @@ class _MyHomePageState extends State<MyHomePage> {
       primaryColor:
           Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0),
       accentColor:
-          Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0));
+          Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0),
+      backgroundColor: Colors.white);
 
   @override
   Widget build(BuildContext context) {
